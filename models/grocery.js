@@ -6,7 +6,7 @@ const grocerySchema = new Schema(
     {
         foods: {
             type: String,
-            required: true
+            required: true,
         },
         brands: {
             type: String,
@@ -19,11 +19,11 @@ const grocerySchema = new Schema(
             default: 1
         },
         price: {
-            type: String
+            type: String,
         }
 },
 {
-    timestamps: true
+    timestamps: true,
 })
 
 module.exports = mongoose.model("Grocery", grocerySchema)
