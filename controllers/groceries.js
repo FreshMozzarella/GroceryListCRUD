@@ -26,9 +26,9 @@ async function index(req, res) {
     }
 }
 async function create(req, res){
-  try {
     const pageData = {...req.body}
+  try {
     const createdGrocery = await Grocery.create(pageData)
-    res.redirect('/groceries/'+ createdGrocery._id);
+    res.redirect('/groceries');
   }catch(err){console.log(err.message)}  
 }

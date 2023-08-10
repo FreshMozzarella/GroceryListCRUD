@@ -1,1 +1,24 @@
 <h2>Groceries</h2>
+
+<form action="/groceries" method="POST">
+   <label>Choose a food:
+    <input type="text" name="foods" required>
+   </label><br>
+   <label>Pick a brand
+    <select name="brands" required>
+        <option value="Kellog's">Kellog's</option>
+        <option value="Goya">Goya</option>
+        <option value="Quaker">Quaker Oats</option>
+        <option value="Dole">Dole</option>
+        <option value="DiGiorno">DiGiorno</option>
+        <option value="Lay's">Lay's</option>
+    </select>
+   </label><br>
+   <label>Quantity:
+    <input type="number" name="quantity" min="1">
+   </label>
+   <label>Enter Price: 
+    <input name="price" type="text">
+   </label>
+   <button type="submit">Add</button>
+</form>
