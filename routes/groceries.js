@@ -6,7 +6,7 @@ var groceryCtrl = require('../controllers/groceries')
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
-
+router.get('/', groceryCtrl.index)
 /* GET movies/new view - /movies/new */
 router.get("/new", groceryCtrl.new);
 
