@@ -4,9 +4,7 @@
   <thead>
     <tr>
       <th>Foods</th>
-      <th>Brands</th>
       <th>Quantity</th>
-      <th>Price</th>
     </tr>
   </thead>
   <tbody>
@@ -14,10 +12,9 @@
     <% groceries.forEach(function(g) { %>
     <tr>
       <td><%= g.foods %></td>
-      <!-- <td><%= g.brands %></td> -->
       <td><%= g.quantity %></td>
-      <!-- <td><%= g.price %></td> -->
     </tr>
+    <a href="/groceries/<%= g._id %>">Test</a>
     <%}) %>
   </tbody>
 </table>

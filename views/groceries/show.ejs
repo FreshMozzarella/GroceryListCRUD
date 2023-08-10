@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<tbody>
+    <% groceries.forEach(function(g) { %>
+        <tr>
+            <td><%= g.brands %></td>
+            <td><%= g.price %> </td>
+        </tr>
+    <% }) %>
+</tbody>
+
+<%- include('../partials/footer') %>

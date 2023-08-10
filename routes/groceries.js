@@ -9,8 +9,9 @@ var groceryCtrl = require('../controllers/groceries')
 router.get('/', groceryCtrl.index)
 /* GET movies/new view - /movies/new */
 router.get("/new", groceryCtrl.new);
+
 router.post('/', groceryCtrl.create);
-// GET movies index view - /movies
-// router.get("/", groceryCtrl.index);
+
+router.get("/:id", groceryCtrl.show)
 
 module.exports = router;

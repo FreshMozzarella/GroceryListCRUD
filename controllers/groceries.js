@@ -3,7 +3,7 @@ const Grocery = require('../models/grocery')
 module.exports = {
     new: loadPage,
     create,
-    //show,
+    show,
     index,
 }
 
@@ -31,4 +31,18 @@ async function create(req, res){
     const createdGrocery = await Grocery.create(pageData)
     res.redirect('/groceries');
   }catch(err){console.log(err.message)}  
+}
+
+async function show(req, res, next) {
+    try {
+        const grocery = await Grocery.findById(req.params.id)
+
+        res.render("groceries/show", {
+            title: "Grocery Details",
+            groceries: grocery
+        })
+    } catch (err) {
+        console.log(err);
+        next(Error(err));
+      }
 }
